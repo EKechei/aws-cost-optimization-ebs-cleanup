@@ -14,3 +14,12 @@
     - Delete them
     - Optionally delete snapshots older than X days
     - Log deleted resources
+
+  # 1. IAM Role Required for Lambda
+  Attach this policy (or equivalent managed permissions):
+  
+  **IAM Permissions**
+  - `ec2:DescribeVolumes`
+  - `ec2:DeleteVolume`
+  - `ec2:DescribeSnapshots`
+  - `ec2:DeleteSnapshot`
