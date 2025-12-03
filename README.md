@@ -1,1 +1,16 @@
 # aws-cost-optimization-ebs-cleanup
+
+# Overview
+1. **AWS Lambda** (Python 3.10+)
+   Runs cleanup logic using Boto3.
+2. **CloudWatch EventBridge Rule**
+   Schedules the Lambda (e.g., daily at midnight).
+3. **IAM Role for Lambda**
+   Permissions to list and delete:
+    - EBS volumes
+    - Snapshots
+4. **Python/Boto3 Script**
+    - Find volumes in available state
+    - Delete them
+    - Optionally delete snapshots older than X days
+    - Log deleted resources
