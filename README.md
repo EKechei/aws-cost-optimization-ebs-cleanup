@@ -3,7 +3,7 @@
 # Overview
 1. **AWS Lambda** (Python 3.10+)
    Runs cleanup logic using Boto3.
-2. **CloudWatch EventBridge Rule**
+2. **Amazon EventBridge Rule**
    Schedules the Lambda (e.g., daily at midnight).
 3. **IAM Role for Lambda**
    Permissions to list and delete:
