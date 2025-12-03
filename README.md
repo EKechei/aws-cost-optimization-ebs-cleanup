@@ -23,3 +23,10 @@
   - `ec2:DeleteVolume`
   - `ec2:DescribeSnapshots`
   - `ec2:DeleteSnapshot`
+
+ # 2. Schedule the Lambda using EventBridge
+ Create a rule:
+
+- Name: `ebs-cleanup-schedule`
+- Schedule expression: `rate(1 day)` or `cron(0 0 * * ? *)`
+- Target → your Lambda function
